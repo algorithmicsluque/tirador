@@ -57,7 +57,7 @@ class Enemy(GameSprite):
            self.rect.x = randint(80, win_width - 80)
            self.speed = randint(1, 5)
 
-# Método para “disparar” (usa la posición del jugador para crear una bala)
+    # Método para “disparar” (usa la posición del jugador para crear una bala)
    def fire(self):
        bullet = GameSprite(img_bullet, self.rect.centerx, self.rect.top, 15, 20, -15)
        return bullet
@@ -76,11 +76,12 @@ monsters = sprite.Group()
 for i in range(1,6):
     monster = Enemy(img_enemy, randint(80, win_width - 80), -40, 80, 50, randint(1,5))
     monsters.add(monster)
+
 # La variable “el juego terminó”: cuando sea True, los objetos dejan de funcionar en el ciclo principal
 finish = False
 
 # Ciclo de juego principal:
-run = True #la bandera se restablece por el botón de cerrar ventana
+run = True # La bandera se restablece por el botón de cerrar ventana
 
 while run:
    # Evento de pulsado del botón “Cerrar”
