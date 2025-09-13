@@ -1,20 +1,5 @@
-# Shooter
-Este es el programa del conjunto de el lecciones del módulo 5. **M5L5 - M5L8**  basado en temática de galaxia
-con sonido envolvente con **Dolby Surround 7.1** con sprites de hasta una resolución de 1080p Full High Definition
-(FHD). Hecho en la academia de programacion Algorithmics para el curso de **Python 2** en **Luque.**
+# Shooter Game - Tirador
 
-# Contenido
-Este programa contiene lo siguiente:
+## Descripción
 
--**main.py**: Programa principal
-
--**galaxy.jpg**: Fondo espacial panorámico
-
--**bullet.png**: Bala de francotirador 12,7×99 .mm OTAN
-
--**ufo.png**: Objeto volador no identificado.
-
--**fire.ogg**: Sonido de disparo realista a 328khz
-
--**space.ogg**: 
-
+Tirador es un juego de disparos en 2D donde los jugadores controlan una nave que debe eliminar enemigos y evitar ser alcanzado por sus ataques. El juego se desarrolla en el espacio exterior.
