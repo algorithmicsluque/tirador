@@ -30,3 +30,11 @@ class GameSprite(sprite.Sprite):
     
     def reset(self):
         window.blit(self.image, (self.rect.x, self.rect.y))
+class Bullet(GameSprite):
+    def update(self):
+        self.rect.y += self.speed
+        global lost
+        if self.rect.y > win_height:
+            self.rect.x = randint(80,win_width - 80)
+            self.rect.y = 0
+            lost = lost + 1
