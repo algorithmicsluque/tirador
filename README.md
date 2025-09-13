@@ -16,5 +16,5 @@ Este programa contiene lo siguiente:
 
 -**fire.ogg**: Sonido de disparo realista a 328khz
 
--**space.ogg**: 
+-**space.ogg**: Sonido de espacio espacial espaciante realista de espacio exterior
 
