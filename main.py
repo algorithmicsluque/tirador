@@ -17,3 +17,13 @@ score = 0
 goal = 10
 lost = 0
 max_lost = 3
+
+
+class Enemy(GameSprite):
+    def udapte(self):
+        self.rect.y += self.speed
+        global lost
+        if self.rect.y > win_heihgt:
+            self.rect.x = randint(80,win_widht - 80)
+            self.rect.y = 0 
+            lost = lost + 1
