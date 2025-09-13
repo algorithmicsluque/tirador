@@ -52,10 +52,11 @@ class Enemy(GameSprite):
    # Método para mover al enemigo
    def update(self):
        self.rect.y += self.speed
+       global lost
        if self.rect.y > win_height:
-           self.rect.y = 0
-           self.rect.x = randint(80, win_width - 80)
-           self.speed = randint(1, 5)
+              self.rect.x = randint(80, win_width - 80)
+              self.rect.y = 0
+              lost = lost + 1
 
     # Método para “disparar” (usa la posición del jugador para crear una bala)
    def fire(self):
