@@ -17,4 +17,15 @@ img_enemy = "ufo.png" # Enemigo
 score = 0
 goal = 10
 lost = 0
-max_lost = 3
+max_lost
+
+class Player(GameSprite):
+    def update(self):
+        kays = kay.get_pressed()
+        if kays(K_LEFT) and self.rect.x > 5:
+            self.rect.x -= self.speed
+        if kays(K_RIGHT) and self.rect.x < win_width - 80:
+            self.rect.x += self.speed
+    def fire(self):
+        Bullet = bullet(img_bullet, self.rect.centex, self.rect.top, 15, 20, -15)
+        Bullet.add(bullet)
