@@ -1,6 +1,7 @@
 from pygame import *
 from random import randint
 
+
 # Música de fondo
 mixer.init()
 mixer.music.load('fire.ogg')
@@ -18,25 +19,25 @@ goal = 10
 lost = 0
 max_lost = 3
 
-# Clase padre para otros objetos
 class GameSprite(sprite.Sprite):
-    # Constructor de clase
     def __init__(self, player_image, player_x, player_y, size_x, size_y, player_speed):
-        # Llamamos al constructor de la clase (Sprite):
         sprite.Sprite.__init__(self)
-
-        # Cada objeto debe almacenar una propiedad image
         self.image = transform.scale(image.load(player_image), (size_x, size_y))
         self.speed = player_speed
-
-        # Cada objeto debe almacenar la propiedad rect en la cual está inscrito
         self.rect = self.image.get_rect()
         self.rect.x = player_x
         self.rect.y = player_y
-
-    # Método que dibuja al personaje en la ventana
+    
     def reset(self):
         window.blit(self.image, (self.rect.x, self.rect.y))
+class Bullet(GameSprite):
+    def update(self):
+        self.rect.y += self.speed
+        global lost
+        if self.rect.y > win_height:
+            self.rect.x = randint(80,win_width - 80)
+            self.rect.y = 0
+            lost = lost + 1
 
 # Clase de jugador principal
 class Player(GameSprite):
