@@ -1,6 +1,7 @@
 from pygame import *
 from random import randint
 
+
 # Música de fondo
 mixer.init()
 mixer.music.load('fire.ogg')
