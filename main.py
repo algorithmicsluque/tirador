@@ -1,6 +1,8 @@
 from pygame import *
 from random import randint
 
+asdsadsa
+
 # Música de fondo
 mixer.init()
 mixer.music.load('fire.ogg')
@@ -17,3 +19,4 @@ score = 0
 goal = 10
 lost = 0
 max_lost = 3
+
